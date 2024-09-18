@@ -1,5 +1,5 @@
 import React ,{useState,useEffect} from "react";
-function todoApp() {
+function TodoApp() {
   const [task, setTask] = useState('');
   const [tasks, setTasks] = useState([]);
 
@@ -43,7 +43,7 @@ function todoApp() {
         {tasks.map((task, index) => (
           <li key={index}>
             {task}
-            <button onClick={() => handleDeleteTask(index)}>Delete</button>
+           
           </li>
         ))}
       </ul>
@@ -51,38 +51,4 @@ function todoApp() {
   );
 }
 
-export default todoApp;
-
-/*function todoApp() {
-    const TDL = ()=>{
-    const [todos, setTodos] = useState([]);
-    const [newTodo, setNewTodo] = useState("") ;
-    useEffect(()=>{
-    const savedTodos = JSON.parse(localStorage.getItem("todos")) || [];
-    setTodos (savedTodos) ;
-    },[]);
-    const addtodo = () => {
-    if (newTodo.trim() !== "") {
-    setTodos ([...todos, { text: newTodo, completed: false }]);
-    setNewTodo ("") ;
-    localStorage.setItem(
-    "todos",
-    JSON. stringify([...todos, { text: newTodo, completed: false }])
-    );
-    }
-};
-
-    
-return(
-    <div>
-    <h1>
-        TodoList
-    </h1>
-    <input placeholder="please input" onClick={setNewTodo}></input>
-    <button>app</button>
-
-    </div>
-)
-}
-}
-export default todoApp;*/
+export default TodoApp;
