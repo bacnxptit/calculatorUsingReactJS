@@ -4,6 +4,7 @@ import './App.css';
 
 function App() {
   const [value,setvalue]=useState(' ')
+  const [color,setcolor] = useState('red')
   function handle(e){
     setvalue(value + e.target.innerHTML)
 
@@ -20,7 +21,7 @@ function App() {
   return (
     
     <div class = "container">
-      <div style={{textAlign:"center",fontSize:"30px",color:"white"}}>Calculator</div>
+      <div style={{textAlign:"center",fontSize:"30px",color:{color}}}>Calculator</div>
     <input type='text' placeholder= " 0" value ={value} />
      <div >
       <button style={{fontSize:"15px"}} onClick={AC}>AC</button>
